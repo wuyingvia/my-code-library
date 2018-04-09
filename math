@@ -1,0 +1,4 @@
+# xw+b
+tf.nn.xw_plus_b(x,weights,biases,name=None)
+x and weights are 2d tensor
+bias is 1d tensor
