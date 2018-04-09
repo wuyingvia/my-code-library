@@ -1,0 +1,4 @@
+#load data
+import pickle
+with open('./train.p','rb') as f:
+    data=pickle.load(f)
