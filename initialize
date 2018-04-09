@@ -1,0 +1,5 @@
+tensorflow
+
+init = tf.global_variables_initializer()
+sess = tf.Session()
+sess.run(init)
