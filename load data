@@ -5,3 +5,4 @@ with open('./train.p','rb') as f:
 
 from keras.datasets import cifar10
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
+# y_train.shape is 2d, (50000, 1). 
