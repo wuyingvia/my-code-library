@@ -1,0 +1,2 @@
+x = tf.placeholder(tf.float32, (None, 32, 32, 3))
+resized = tf.image.resize_images(x, (227, 227))
