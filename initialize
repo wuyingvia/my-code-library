@@ -3,3 +3,6 @@ tensorflow
 init = tf.global_variables_initializer()
 sess = tf.Session()
 sess.run(init)
+
+
+init_op = tf.initialize_all_variables()
