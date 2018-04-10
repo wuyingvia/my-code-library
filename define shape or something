@@ -1,0 +1,1 @@
+nb_classes = len(np.unique(y_train))
