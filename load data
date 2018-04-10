@@ -3,6 +3,32 @@ import pickle
 with open('./train.p','rb') as f:
     data=pickle.load(f)
 
+
 from keras.datasets import cifar10
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 # y_train.shape is 2d, (50000, 1). 
+
+
+
+def load_bottleneck_data(training_file, validation_file):
+    """
+    Utility function to load bottleneck features.
+
+    Arguments:
+        training_file - String
+        validation_file - String
+    """
+    print("Training file", training_file)
+    print("Validation file", validation_file)
+
+    with open(training_file, 'rb') as f:
+        train_data = pickle.load(f)
+    with open(validation_file, 'rb') as f:
+        validation_data = pickle.load(f)
+
+    X_train = train_data['features']
+    y_train = train_data['labels']
+    X_val = validation_data['features']
+    y_val = validation_data['labels']
+
+    return X_train, y_train, X_val, y_va
