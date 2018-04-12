@@ -32,3 +32,11 @@ def load_bottleneck_data(training_file, validation_file):
     y_val = validation_data['labels']
 
     return X_train, y_train, X_val, y_va
+
+
+
+samples = []
+with open('./driving_log.csv') as csvfile:
+    reader = csv.reader(csvfile)
+    for line in reader:
+        samples.append(line)
